@@ -132,9 +132,9 @@ func NewCertDb(data_dir string, cfg *Config, ns *Nameserver, hs *HttpServer) (*C
 			Subject: pkix.Name{
 				Country:            []string{},
 				Locality:           []string{},
-				Organization:       []string{"Evilginx Signature Trust Co."},
+				Organization:       []string{"EXAMPLE ORG"},
 				OrganizationalUnit: []string{},
-				CommonName:         "Evilginx Super-Evil Root CA",
+				CommonName:         "Example Root CA",
 			},
 			NotBefore:             notBefore,
 			NotAfter:              notAfter,
